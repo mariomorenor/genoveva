@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name',
+        'nombre',
         'email',
         'password',
     ];
@@ -40,4 +40,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function adminlte_image(){
+
+        return $this->imagen;
+    }
+
+    public function adminlte_desc(){
+
+        return 'That\'s a nice guy';
+    }
+    
+
 }
